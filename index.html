@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kualanamu Travel – Antar Jemput Bandara &amp; Travel se-Sumatera</title>
+<meta name="description" content="Antar jemput Bandara Kualanamu, travel antar kota dan provinsi se-Sumatera, perjalanan wisata. Alphard, Innova, Avanza. Booking lewat WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,800;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+@property --sw{syntax:'<number>';inherits:true;initial-value:0}
+@property --amp{syntax:'<number>';inherits:true;initial-value:0}
+:root{
+  --navy:#0b2a5b;--blue:#1450b4;--sky:#3f8fe8;--mist:#e8f1ff;--ice:#cfe2fb;--sun:#ffc72c;--wa:#25d366;
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --i-alphard:url("assets/img/alphard.webp");--i-innova:url("assets/img/innova.webp");--i-avanza:url("assets/img/avanza.webp");--i-side:url("assets/img/side.webp");
+  --t-toba:url("assets/img/toba.jpg");--t-gadang:url("assets/img/gadang.jpg");--t-air:url("assets/img/air.jpg");--t-pagaruyung:url("assets/img/pagaruyung.jpg");--t-rumah:url("assets/img/rumah.jpg");--t-kelok:url("assets/img/kelok.jpg");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font-family:var(--body);color:var(--navy);background:var(--mist);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-style:italic;font-weight:900;line-height:1.05}
+svg{display:block}
+.sr{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:800;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;font-size:1rem;line-height:1.2;text-align:center}
+.btn:hover{transform:translateY(-3px)}
+.btn svg{width:22px;height:22px;fill:currentColor;flex:none}
+.btn-sun{background:var(--sun);color:var(--navy);box-shadow:0 6px 0 #c99500}.btn-sun:hover{box-shadow:0 9px 0 #c99500}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 0 #148f45}.btn-wa:hover{box-shadow:0 9px 0 #148f45}
+.btn-line{background:transparent;color:#fff;border:2px solid #fff}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 6px 0 #05152f}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;border-bottom:3px solid var(--sun)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0;gap:1rem;flex-wrap:wrap}
+.brand{font-weight:800;color:var(--sun);font-size:1.05rem;letter-spacing:.02em;white-space:nowrap;line-height:1.2}
+.brand small{display:block;color:#fff;font-weight:500;font-size:.7rem;letter-spacing:0}
+.nav ul{display:flex;gap:1.4rem;list-style:none;font-weight:600;font-size:.92rem}
+.nav ul a:hover{color:var(--sun)}
+.nav .btn{padding:.5rem 1.1rem;box-shadow:none;font-size:.88rem}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(180deg,#3f8fe8 0%,#74b0f0 48%,#cfe2fb 100%);padding:3.4rem 0 0;text-align:center;overflow:hidden}
+.cloud{position:absolute;background:#fff;border-radius:999px;filter:blur(18px);opacity:.75;animation:drift linear infinite}
+.c1{width:340px;height:110px;top:6%;left:-20%;animation-duration:60s}
+.c2{width:260px;height:90px;top:34%;left:-30%;animation-duration:85s;animation-delay:-30s}
+.c3{width:420px;height:130px;top:14%;left:-40%;animation-duration:110s;animation-delay:-70s;opacity:.55}
+@keyframes drift{to{transform:translateX(190vw)}}
+.jet{position:absolute;z-index:1;pointer-events:none;height:auto;filter:drop-shadow(0 14px 14px rgba(11,42,91,.28));animation:jet linear infinite both}
+.j1{width:clamp(170px,26vw,360px);left:-400px;top:44%;animation-duration:26s;animation-delay:1s}
+.j2{width:clamp(110px,15vw,210px);left:-260px;top:62%;animation-duration:42s;animation-delay:13s;opacity:.92}
+@keyframes jet{from{transform:translate(0,0)}to{transform:translate(calc(100vw + 800px),calc((100vw + 800px)*-.46))}}
+.hero .wrap{position:relative;z-index:2}
+.badge{display:inline-block;background:var(--navy);color:var(--sun);padding:.55rem 1.4rem;border-radius:14px;font-weight:800;letter-spacing:.04em;line-height:1.3}
+.badge small{display:block;color:#fff;font-weight:500;letter-spacing:0;font-size:.8rem}
+.lead{font-family:var(--display);font-style:italic;font-weight:800;color:var(--blue);font-size:clamp(1.3rem,4vw,2.1rem);margin-top:1.2rem}
+.hero h1{color:#fff;font-size:clamp(3.4rem,14vw,9rem);letter-spacing:-.02em;-webkit-text-stroke:2px var(--blue);paint-order:stroke fill;text-shadow:0 8px 0 rgba(20,80,180,.35)}
+.pill{display:inline-block;background:var(--sun);color:var(--navy);font-family:var(--display);font-style:italic;font-weight:800;padding:.55rem 1.5rem;border-radius:14px;font-size:clamp(.9rem,2.6vw,1.4rem);margin:.8rem 0 1.4rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
+
+/* ADEGAN: penumpang menunggu, sopir turun, ngobrol, naik, jalan */
+.scene{container-type:inline-size;position:relative;margin-top:.8rem;z-index:2}
+.stage{--w:clamp(165px,38cqw,520px);--T:24s;--d:0s;--stop:16%;
+  --doorD:calc(var(--stop) + var(--w)*.62);--doorP:calc(var(--stop) + var(--w)*.34);
+  --wait:calc(var(--stop) + var(--w)*1.4);--meet:calc(var(--wait) - var(--w)*.32);
+  position:relative;height:calc(var(--w)*.94);overflow:hidden}
+.hills{position:absolute;left:0;bottom:calc(var(--w)*.34);width:100%;height:calc(var(--w)*.5);z-index:1}
+.palm{position:absolute;bottom:calc(var(--w)*.3);width:calc(var(--w)*.26);z-index:2}
+.road{position:absolute;left:0;right:0;bottom:calc(var(--w)*.14);height:calc(var(--w)*.2);background:var(--navy);z-index:4}
+.road::after{content:"";position:absolute;left:0;right:0;top:48%;height:4px;background:repeating-linear-gradient(90deg,#fff 0 34px,transparent 34px 68px);opacity:.85}
+.walk{position:absolute;left:0;right:0;bottom:0;height:calc(var(--w)*.14);background:repeating-linear-gradient(90deg,transparent 0 calc(var(--w)*.3 - 2px),rgba(11,42,91,.1) calc(var(--w)*.3 - 2px) calc(var(--w)*.3)),#e4ecf9;border-top:6px solid #b6c6e2;z-index:8}
+.shelter{position:absolute;left:calc(var(--wait) - var(--w)*.27);bottom:calc(var(--w)*.14);width:calc(var(--w)*.54);z-index:6}
+.signpost{position:absolute;right:1.5%;bottom:calc(var(--w)*.14);width:calc(var(--w)*.5);z-index:6;text-align:center}
+.signpost b{display:block;background:#0a7a43;color:#fff;font-size:clamp(.5rem,calc(var(--w)*.05),.8rem);padding:.3em .5em;border-radius:6px;border:2px solid #fff;line-height:1.2}
+.signpost i{display:block;width:5px;height:calc(var(--w)*.34);background:#b6c6e2;margin:0 auto}
+
+.car{position:absolute;bottom:calc(var(--w)*.125);left:calc(var(--w)*-1.2);width:var(--w);z-index:20;animation:car var(--T) var(--d) infinite both}
+.carimg{width:100%;aspect-ratio:1/.433;background:var(--i-side) center/contain no-repeat;filter:drop-shadow(0 calc(var(--w)*.03) calc(var(--w)*.02) rgba(0,0,0,.4));animation:rumble .3s ease-in-out infinite alternate}
+@keyframes rumble{to{transform:translateY(-1.2px)}}
+@keyframes car{
+  0%{left:calc(var(--w)*-1.2);animation-timing-function:cubic-bezier(.12,.6,.25,1)}
+  22%{left:var(--stop)}
+  70%{left:var(--stop);animation-timing-function:cubic-bezier(.6,0,.9,.55)}
+  97%,100%{left:calc(100% + var(--w)*.4)}
+}
+.actor{position:absolute;bottom:calc(var(--w)*.025);width:calc(var(--w)*.21);z-index:40;opacity:0;transform:translateX(-50%);animation:swing .42s ease-in-out infinite alternate}
+@keyframes swing{from{--sw:-1}to{--sw:1}}
+.fig{width:100%;height:auto;transform-origin:50% 100%}
+.lgA,.lgB{transform-box:fill-box;transform-origin:50% 6%}
+.lgA{transform:rotate(calc(var(--sw)*var(--amp)*26deg))}
+.lgB{transform:rotate(calc(var(--sw)*var(--amp)*-26deg))}
+.arm{transform-box:fill-box;transform-origin:50% 6%;animation:wave .9s ease-in-out infinite alternate}
+@keyframes wave{from{transform:rotate(0)}to{transform:rotate(-26deg)}}
+.drv{left:var(--doorD);animation:swing .42s ease-in-out infinite alternate,drv var(--T) var(--d) infinite both,ampD var(--T) var(--d) infinite both}
+.drv .fig{animation:faceD var(--T) var(--d) infinite both}
+.pax{left:var(--wait);animation:swing .42s ease-in-out infinite alternate,pax var(--T) var(--d) infinite both,ampP var(--T) var(--d) infinite both}
+.pax .fig{transform:scaleX(-1)}
+@keyframes drv{
+  0%,23.5%{left:var(--doorD);opacity:0;transform:translateX(-50%) scale(.85);animation-timing-function:ease-out}
+  25%{left:var(--doorD);opacity:1;transform:translateX(-50%) scale(1);animation-timing-function:ease-in-out}
+  37%{left:var(--meet);opacity:1}
+  52%{left:var(--meet);opacity:1;animation-timing-function:ease-in-out}
+  62%{left:var(--doorD);opacity:1;transform:translateX(-50%) scale(1)}
+  65%,100%{left:var(--doorD);opacity:0;transform:translateX(-50%) scale(.85)}
+}
+@keyframes pax{
+  0%{left:var(--wait);opacity:0}
+  3%{left:var(--wait);opacity:1}
+  52%{left:var(--wait);opacity:1;animation-timing-function:ease-in-out}
+  63%{left:var(--doorP);opacity:1;transform:translateX(-50%) scale(1)}
+  66%,100%{left:var(--doorP);opacity:0;transform:translateX(-50%) scale(.85)}
+}
+@keyframes ampD{0%,24.9%{--amp:0}25%,36.9%{--amp:1}37%,51.9%{--amp:0}52%,61.9%{--amp:1}62%,100%{--amp:0}}
+@keyframes ampP{0%,51.9%{--amp:0}52%,62.9%{--amp:1}63%,100%{--amp:0}}
+@keyframes faceD{0%,51.9%{transform:scaleX(1)}52%,100%{transform:scaleX(-1)}}
+.bub{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);width:max-content;max-width:calc(var(--w)*1.1);background:#fff;color:var(--navy);font-size:clamp(.62rem,calc(var(--w)*.06),.9rem);font-weight:700;line-height:1.25;padding:.45em .8em;border-radius:12px;box-shadow:0 4px 10px rgba(11,42,91,.3);text-align:center;opacity:0}
+.bub::after{content:"";position:absolute;top:100%;left:50%;margin-left:-6px;border:6px solid transparent;border-top-color:#fff}
+.bd{background:var(--sun);animation:bd var(--T) var(--d) infinite both}.bd::after{border-top-color:var(--sun)}
+.bp{animation:bp var(--T) var(--d) infinite both}
+@keyframes bd{0%,38%{opacity:0}40%,45%{opacity:1}47%,100%{opacity:0}}
+@keyframes bp{0%,46%{opacity:0}48%,52%{opacity:1}54%,100%{opacity:0}}
+.actor .bub{left:auto;right:-30%;transform:none}
+
+@container (max-width:520px){.signpost{display:none}}
+
+/* PITA RUTE */
+.marq{background:var(--sun);color:var(--navy);overflow:hidden;white-space:nowrap;border-block:3px solid var(--navy);font-weight:800}
+.track{display:inline-flex;padding:.8rem 0;animation:mq 40s linear infinite}
+.track span{padding-right:2.4rem}.track span::after{content:"✈";margin-left:2.4rem;color:var(--blue)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* UMUM */
+section{padding:5.5rem 0}
+.title{font-size:clamp(2.1rem,6vw,3.6rem);color:var(--navy);margin-bottom:.7rem}
+.sub{max-width:54ch;margin-bottom:2.4rem;color:#27457a;font-size:1.05rem}
+
+/* LAYANAN */
+.svc{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+.checks{list-style:none;display:grid;gap:1.1rem;margin-top:1.8rem}
+.checks li{display:flex;gap:1rem;align-items:flex-start}
+.checks .ok{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);display:grid;place-items:center;margin-top:2px;box-shadow:0 3px 0 var(--navy)}
+.checks .ok svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.checks b{display:block;font-size:1.12rem;line-height:1.3}
+.checks span{font-size:.93rem;color:#3b5a8f}
+.collage{position:relative;aspect-ratio:1/1.05}
+.ph{position:absolute;background:center/cover no-repeat;border:6px solid #fff;border-radius:10px;box-shadow:0 14px 28px rgba(11,42,91,.25)}
+.ph1{inset:0 12% 28% 0;background-image:var(--t-toba);transform:rotate(-3deg)}
+.ph2{inset:46% 0 0 34%;background-image:var(--t-kelok);transform:rotate(3deg)}
+.stamp{position:absolute;left:2%;bottom:6%;width:clamp(96px,20%,130px);aspect-ratio:1;border-radius:50%;background:var(--sun);color:var(--navy);display:grid;place-items:center;text-align:center;font-family:var(--display);font-style:italic;font-weight:900;line-height:1.05;font-size:clamp(.95rem,2.4vw,1.25rem);border:3px dashed var(--navy);transform:rotate(-10deg);z-index:3}
+
+/* ARMADA (pilih lewat tab, tanpa JavaScript) */
+.fleet{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.fleet::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(63,143,232,.45),transparent);right:-120px;top:-120px}
+.fleet .wrap{position:relative}
+.fleet .title{color:#fff}.fleet .sub{color:var(--ice)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:1.6rem}
+.tabs label{cursor:pointer;display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;border-radius:18px;border:2px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);font-weight:800;line-height:1.2;transition:background .2s,border-color .2s,transform .2s;min-width:0}
+.tabs label:hover{transform:translateY(-3px)}
+.tabs .th{flex:none;width:clamp(54px,9vw,96px);aspect-ratio:1/.7;background:center/contain no-repeat}
+.tabs small{display:block;font-weight:500;color:var(--ice);font-size:.78rem}
+.th.a{background-image:var(--i-alphard)}.th.i{background-image:var(--i-innova)}.th.v{background-image:var(--i-avanza)}
+#c-a:checked ~ .tabs label[for=c-a],#c-i:checked ~ .tabs label[for=c-i],#c-v:checked ~ .tabs label[for=c-v]{background:var(--sun);color:var(--navy);border-color:var(--sun)}
+#c-a:checked ~ .tabs label[for=c-a] small,#c-i:checked ~ .tabs label[for=c-i] small,#c-v:checked ~ .tabs label[for=c-v] small{color:#4a3a00}
+#c-a:focus-visible ~ .tabs label[for=c-a],#c-i:focus-visible ~ .tabs label[for=c-i],#c-v:focus-visible ~ .tabs label[for=c-v]{outline:3px solid #fff;outline-offset:3px}
+.panel{display:none;grid-template-columns:1.1fr .9fr;gap:2.4rem;align-items:center;background:linear-gradient(160deg,#1b5dbd,#123f86);border-radius:30px;padding:2.2rem;border:2px solid rgba(255,255,255,.18);animation:pin .45s ease}
+@keyframes pin{from{opacity:0;transform:translateY(14px)}}
+#c-a:checked ~ .panels .pa,#c-i:checked ~ .panels .pi,#c-v:checked ~ .panels .pv{display:grid}
+.stagecar{position:relative;padding:1rem 1rem 2rem}
+.stagecar::before{content:"";position:absolute;left:4%;right:4%;bottom:.6rem;height:26%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,199,44,.55),rgba(255,199,44,0) 70%)}
+.stagecar::after{content:"";position:absolute;left:12%;right:12%;bottom:1.1rem;height:16px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.5),transparent)}
+.stagecar .pic{position:relative;z-index:1;width:100%;background:center/contain no-repeat;animation:float 5s ease-in-out infinite alternate}
+@keyframes float{to{transform:translateY(-6px)}}
+.pa .pic{background-image:var(--i-alphard);aspect-ratio:1/.76}.pi .pic{background-image:var(--i-innova);aspect-ratio:1/.685}.pv .pic{background-image:var(--i-avanza);aspect-ratio:1/.766}
+.panel h3{font-family:var(--body);font-style:normal;font-weight:800;font-size:clamp(1.5rem,3.4vw,2.2rem);color:var(--sun);line-height:1.15;margin-bottom:.6rem}
+.panel p{color:var(--ice);margin-bottom:1rem}
+.panel ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.6rem}
+.panel li{background:rgba(255,255,255,.14);padding:.25rem .85rem;border-radius:999px;font-size:.82rem;font-weight:700}
+.panel .note{font-size:.84rem;color:var(--ice);margin:.9rem 0 0}
+
+/* TUJUAN */
+.pcs{display:flex;gap:1.3rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem .4rem 1.8rem;margin-inline:-.4rem;-webkit-overflow-scrolling:touch}
+.pc{flex:0 0 min(78vw,340px);scroll-snap-align:center;background:#fff;padding:.7rem .7rem 1rem;border-radius:6px;box-shadow:0 12px 26px rgba(11,42,91,.22);position:relative;transition:transform .3s}
+.pc:nth-child(odd){transform:rotate(-1.6deg)}.pc:nth-child(even){transform:rotate(1.4deg)}
+.pc:hover{transform:rotate(0) translateY(-6px)}
+.pc .im{aspect-ratio:4/3;background-position:center;background-size:cover;background-repeat:no-repeat;border-radius:3px}
+.pc h3{font-size:1.35rem;margin:.8rem .3rem .1rem;color:var(--navy)}
+.pc p{margin:0 .3rem;font-size:.86rem;color:#3b5a8f}
+.pm{position:absolute;top:1.3rem;right:1.3rem;width:62px;height:62px;border-radius:50%;border:2px solid rgba(255,255,255,.95);color:#fff;font-size:.56rem;font-weight:800;display:grid;place-items:center;text-align:center;line-height:1.15;background:rgba(11,42,91,.55);transform:rotate(12deg);backdrop-filter:blur(2px)}
+.hint{font-size:.85rem;color:#3b5a8f;margin-top:-.6rem}
+@media(min-width:1000px){.pcs{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding-bottom:1rem}.pc{flex:none}.hint{display:none}}
+.t-toba{background-image:var(--t-toba)}.t-gadang{background-image:var(--t-gadang)}.t-air{background-image:var(--t-air)}.t-pagaruyung{background-image:var(--t-pagaruyung)}.t-rumah{background-image:var(--t-rumah)}.t-kelok{background-image:var(--t-kelok)}
+
+/* JANJI */
+.promise{background:var(--sun);padding:4rem 0;border-block:3px solid var(--navy);position:relative;overflow:hidden}
+.promise p.big{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(2rem,7vw,4.6rem);line-height:1.05;color:var(--navy);max-width:16ch}
+.promise p.small{margin-top:1.2rem;max-width:46ch;font-weight:600}
+.promise svg{position:absolute;right:-30px;bottom:-40px;width:min(340px,50vw);opacity:.16;fill:var(--navy)}
+
+/* ALUR */
+.route{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;position:relative}
+.route::before{content:"";position:absolute;left:8%;right:8%;top:23px;border-top:4px dashed var(--blue);opacity:.5}
+.stop{position:relative;text-align:center;padding:0 .4rem}
+.stop .n{position:relative;width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--sun);font-weight:800;display:grid;place-items:center;margin:0 auto 1rem;border:4px solid var(--mist);box-shadow:0 0 0 3px var(--navy);font-size:1.1rem}
+.stop h3{font-family:var(--body);font-style:normal;font-weight:800;font-size:1.1rem;margin-bottom:.3rem;line-height:1.25}
+.stop p{font-size:.92rem;color:#3b5a8f}
+
+/* FAQ */
+.faqs{background:#fff}
+.faq{max-width:780px;margin:2rem auto 0;display:grid;gap:.8rem}
+.faq details{background:var(--mist);border-radius:16px;border:2px solid var(--navy);padding:0 1.2rem}
+.faq summary{cursor:pointer;font-weight:800;padding:1rem 0;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--blue);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open]{background:#fff8dc}
+.faq p{padding-bottom:1rem;font-size:.95rem}
+
+/* KONTAK: boarding pass */
+.contact{background:linear-gradient(135deg,var(--blue),var(--sky));color:#fff;position:relative;overflow:hidden}
+.contact::before,.contact::after{content:"";position:absolute;background:#fff;border-radius:999px;filter:blur(26px);opacity:.25}
+.contact::before{width:320px;height:100px;top:6%;left:-4%}.contact::after{width:400px;height:120px;bottom:4%;right:-6%}
+.contact .wrap{position:relative;z-index:1}
+.contact .title{color:#fff;text-align:center}.contact .sub{color:#fff;text-align:center;margin-inline:auto}
+.pass{display:grid;grid-template-columns:1.25fr .75fr;max-width:940px;margin:0 auto;color:var(--navy);filter:drop-shadow(0 20px 22px rgba(5,21,47,.4))}
+.pass-main{background:#fff;border-radius:24px 0 0 24px;padding:1.8rem 2rem 2rem;-webkit-mask:radial-gradient(circle 14px at 100% 0,#0000 97%,#000),radial-gradient(circle 14px at 100% 100%,#0000 97%,#000);-webkit-mask-composite:source-in;mask:radial-gradient(circle 14px at 100% 0,#0000 97%,#000),radial-gradient(circle 14px at 100% 100%,#0000 97%,#000);mask-composite:intersect}
+.pass-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-bottom:3px solid var(--navy);padding-bottom:.9rem;margin-bottom:1.3rem;font-weight:800}
+.pass-top b{font-family:var(--display);font-style:italic;font-weight:900;font-size:1.5rem;color:var(--blue)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.4rem}
+.fields div{min-width:0}
+.fields small{display:block;font-size:.72rem;color:#5b76a6;font-weight:700;margin-bottom:.1rem}
+.fields strong{font-size:1.02rem;line-height:1.3;display:block}
+.fields .full{grid-column:1/-1}
+.bars{margin-top:1.4rem;height:34px;background:repeating-linear-gradient(90deg,var(--navy) 0 2px,#fff 2px 5px,var(--navy) 5px 9px,#fff 9px 11px,var(--navy) 11px 12px,#fff 12px 17px);border-radius:3px}
+.stub{background:var(--mist);border-radius:0 24px 24px 0;border-left:3px dashed #9db8e0;padding:1.8rem 1.6rem;display:grid;gap:.8rem;align-content:center;-webkit-mask:radial-gradient(circle 14px at 0 0,#0000 97%,#000),radial-gradient(circle 14px at 0 100%,#0000 97%,#000);-webkit-mask-composite:source-in;mask:radial-gradient(circle 14px at 0 0,#0000 97%,#000),radial-gradient(circle 14px at 0 100%,#0000 97%,#000);mask-composite:intersect}
+.stub h3{font-family:var(--body);font-style:normal;font-size:1.25rem;font-weight:800;text-align:center}
+.ig{background:#fff;color:var(--navy);box-shadow:0 6px 0 var(--ice);border:2px solid var(--navy)}
+
+/* FOOTER */
+footer{background:var(--navy);color:var(--ice);padding:0 0 6rem;font-size:.92rem;position:relative;overflow:hidden}
+.fr{height:54px;position:relative;border-bottom:4px dashed rgba(255,199,44,.55);margin-bottom:2.8rem}
+.fr i{position:absolute;bottom:-4px;left:-140px;width:120px;aspect-ratio:1/.433;background:var(--i-side) center/contain no-repeat;animation:fdrive 16s linear infinite}
+@keyframes fdrive{to{transform:translateX(calc(100vw + 280px))}}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:2rem}
+footer h4{color:var(--sun);margin-bottom:.7rem;font-size:1rem}
+footer ul{list-style:none;display:grid;gap:.4rem}
+footer a:hover{color:var(--sun)}
+.fb{font-family:var(--display);font-style:italic;font-weight:900;color:var(--sun);font-size:1.7rem;line-height:1.05;margin-bottom:.7rem}
+.copy{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem;font-size:.82rem}
+
+/* WA mengambang */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--wa);color:#fff;border-radius:999px;padding:.8rem 1.2rem;display:flex;gap:.6rem;align-items:center;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.3);animation:pulse 2.2s infinite}
+.fab svg{width:24px;height:24px;fill:currentColor;flex:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7),0 8px 20px rgba(0,0,0,.3)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0),0 8px 20px rgba(0,0,0,.3)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 8px 20px rgba(0,0,0,.3)}}
+
+/* POPUP PILIH NOMOR (:target, tanpa JavaScript) */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1rem;background:rgba(11,42,91,.78);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.modal:target{opacity:1;visibility:visible}
+.modal .back{position:absolute;inset:0}
+.box{position:relative;background:#fff;border-radius:26px;width:min(480px,100%);max-height:92vh;overflow:auto;padding:1.6rem;border:4px solid var(--sun);transform:translateY(24px) scale(.96);transition:transform .3s}
+.modal:target .box{transform:none}
+.x{position:absolute;top:.7rem;right:.9rem;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:1.2rem;font-weight:800;z-index:2}
+.mpic{background:linear-gradient(180deg,#2466c7,#103a80);border-radius:18px;padding:1rem 1.4rem;margin-bottom:1rem}
+.mpic .im{width:min(100%,210px);margin-inline:auto;background:center/contain no-repeat}
+.box h3{font-family:var(--body);font-style:normal;font-size:1.3rem;font-weight:800;margin-bottom:.2rem}
+.box p{font-size:.92rem;color:#27457a;margin-bottom:.8rem}
+.box pre{white-space:pre-wrap;font-family:var(--body);font-size:.8rem;background:var(--mist);border-radius:12px;padding:.8rem;margin-bottom:1rem;color:var(--navy);border:1px dashed var(--sky)}
+.box .btn{width:100%;margin-bottom:.8rem;padding:.8rem 1rem;white-space:nowrap}
+#tutup{position:fixed;top:0;left:0;width:1px;height:1px}
+
+/* RESPONSIF */
+@media(max-width:900px){
+  .svc{grid-template-columns:1fr;gap:2.4rem}
+  .collage{max-width:460px;margin-inline:auto;width:100%}
+  .panel{grid-template-columns:1fr;padding:1.4rem;gap:1.2rem}
+  .route{grid-template-columns:1fr;gap:1.6rem;padding-left:0}
+  .route::before{left:23px;right:auto;top:20px;bottom:20px;border-top:0;border-left:4px dashed var(--blue)}
+  .stop{display:grid;grid-template-columns:48px 1fr;gap:0 1rem;text-align:left;padding:0}
+  .stop .n{margin:0;grid-row:span 2}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .pass{grid-template-columns:1fr}
+  .pass-main{border-radius:24px 24px 0 0;-webkit-mask:radial-gradient(circle 14px at 0 100%,#0000 97%,#000),radial-gradient(circle 14px at 100% 100%,#0000 97%,#000);-webkit-mask-composite:source-in;mask:radial-gradient(circle 14px at 0 100%,#0000 97%,#000),radial-gradient(circle 14px at 100% 100%,#0000 97%,#000);mask-composite:intersect}
+  .stub{border-left:0;border-top:3px dashed #9db8e0;border-radius:0 0 24px 24px;-webkit-mask:radial-gradient(circle 14px at 0 0,#0000 97%,#000),radial-gradient(circle 14px at 100% 0,#0000 97%,#000);-webkit-mask-composite:source-in;mask:radial-gradient(circle 14px at 0 0,#0000 97%,#000),radial-gradient(circle 14px at 100% 0,#0000 97%,#000);mask-composite:intersect}
+}
+@media(max-width:760px){
+  .nav ul{order:3;width:100%;overflow-x:auto;gap:1.1rem;padding-bottom:.2rem;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  section{padding:3.8rem 0}
+  .hero h1{-webkit-text-stroke:1.5px var(--blue)}
+  .fab span{display:none}.fab{padding:.9rem}
+  .tabs{gap:.5rem}.tabs label{flex-direction:column;text-align:center;padding:.6rem .4rem;gap:.3rem}
+  .tabs small{display:none}
+  .fields{grid-template-columns:1fr 1fr;gap:.9rem}
+  .pass-main{padding:1.4rem}
+}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .car{left:var(--stop)}
+  .actor{display:none}
+  .pax{display:block;opacity:1;left:var(--wait)}
+}
+</style>
+</head>
+<body>
+<i id="tutup"></i>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#atas" class="brand">KUALANAMU TRAVEL<small>Antar Jemput Bandara</small></a>
+    <ul>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#armada">Armada</a></li>
+      <li><a href="#wisata">Tujuan</a></li>
+      <li><a href="#pesan">Cara Pesan</a></li>
+      <li><a href="#faq">Tanya Jawab</a></li>
+    </ul>
+    <a class="btn btn-sun" href="#pesan-umum">Booking Now</a>
+  </div>
+</header>
+
+<main id="atas">
+<!-- HERO -->
+<div class="hero">
+  <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+  <img class="jet j1" src="assets/img/plane1.webp" alt="" width="720" height="222">
+  <img class="jet j2" src="assets/img/plane2.webp" alt="" width="720" height="220">
+  <div class="wrap">
+    <div class="badge">KUALANAMU TRAVEL<small>Antar Jemput Bandara</small></div>
+    <p class="lead">Layanan Travel</p>
+    <h1>Antar Jemput</h1>
+    <p class="pill">Bandara Kualanamu • Medan &amp; Sekitarnya</p>
+    <div class="cta">
+      <a class="btn btn-wa" href="#pesan-umum"><svg><use href="#i-wa"/></svg>Booking lewat WhatsApp</a>
+      <a class="btn btn-line" href="#armada">Lihat Armada</a>
+    </div>
+  </div>
+
+  <div class="scene" role="img" aria-label="Animasi: sopir Alphard turun menjemput penumpang di halte, lalu berangkat ke bandara">
+    <div class="stage">
+      <svg class="hills" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 200V120q120-70 260-20t250-30 260 40 220-50 210 30v110z" fill="#8fc0f2"/><path d="M0 200V150q150-50 300-10t300-20 300 30 300-30v80z" fill="#5da2ea"/></svg>
+      <svg class="palm" style="left:3%" viewBox="0 0 80 160" aria-hidden="true"><path d="M40 160q-4-60 6-100" stroke="#6b4a2b" stroke-width="7" fill="none" stroke-linecap="round"/><g stroke="#2f8f4e" stroke-width="9" fill="none" stroke-linecap="round"><path d="M46 60q-26-18-44-4"/><path d="M46 60q-12-30 12-38"/><path d="M46 60q26-20 34 2"/><path d="M46 60q22-6 26 16"/><path d="M46 60q-20 0-26 18"/></g></svg>
+      <svg class="palm" style="left:47%" viewBox="0 0 80 160" aria-hidden="true"><path d="M40 160q4-60-6-100" stroke="#6b4a2b" stroke-width="7" fill="none" stroke-linecap="round"/><g stroke="#2f8f4e" stroke-width="9" fill="none" stroke-linecap="round"><path d="M34 60q-26-18-34-2"/><path d="M34 60q-12-30 12-36"/><path d="M34 60q26-20 40 0"/><path d="M34 60q22-4 28 14"/><path d="M34 60q-20 2-24 18"/></g></svg>
+      <svg class="shelter" viewBox="0 0 200 130" aria-hidden="true"><path d="M4 30h192l-10 18H14z" fill="#ffc72c" stroke="#0b2a5b" stroke-width="3"/><rect x="22" y="48" width="6" height="78" fill="#0b2a5b"/><rect x="172" y="48" width="6" height="78" fill="#0b2a5b"/><rect x="22" y="48" width="156" height="60" fill="#cfe2fb" opacity=".45"/><rect x="38" y="92" width="124" height="8" rx="3" fill="#0b2a5b"/><rect x="46" y="100" width="5" height="26" fill="#0b2a5b"/><rect x="149" y="100" width="5" height="26" fill="#0b2a5b"/><rect x="46" y="6" width="108" height="21" rx="5" fill="#0b2a5b"/><text x="100" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#ffc72c" font-family="sans-serif">TITIK JEMPUT</text></svg>
+      <div class="signpost" aria-hidden="true"><b>Bandara Kualanamu ➜</b><i></i></div>
+      <div class="road"></div>
+      <div class="car"><div class="carimg"></div></div>
+
+      <!-- Sopir: turun dari mobil, menemui penumpang, lalu kembali ke mobil -->
+      <div class="actor drv">
+        <p class="bub bd">Selamat siang, Pak! Ke Kualanamu ya?</p>
+        <svg class="fig" viewBox="0 0 80 130" aria-hidden="true">
+          <ellipse cx="40" cy="126" rx="26" ry="4" fill="#000" opacity=".2"/>
+          <g class="lgA"><rect x="29" y="84" width="11" height="38" rx="5" fill="#1a1f2e"/><ellipse cx="33" cy="123" rx="9" ry="4" fill="#0a0a0a"/></g>
+          <g class="lgB"><rect x="42" y="84" width="11" height="38" rx="5" fill="#1a1f2e"/><ellipse cx="48" cy="123" rx="9" ry="4" fill="#0a0a0a"/></g>
+          <rect x="24" y="40" width="34" height="48" rx="12" fill="#0b2a5b"/><path d="M33 40l8 12 8-12z" fill="#ffc72c"/>
+          <rect x="15" y="44" width="10" height="34" rx="5" fill="#0b2a5b"/><circle cx="20" cy="79" r="5" fill="#d9a066"/>
+          <rect x="57" y="44" width="10" height="34" rx="5" fill="#0b2a5b"/><circle cx="62" cy="79" r="5" fill="#d9a066"/>
+          <circle cx="40" cy="24" r="15" fill="#d9a066"/>
+          <path d="M26 17q14-14 28 0v6H26z" fill="#111"/>
+          <circle cx="35" cy="27" r="1.8" fill="#222"/><circle cx="46" cy="27" r="1.8" fill="#222"/>
+          <path d="M35 34q5 4 10 0" stroke="#6b2f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Penumpang: menunggu di halte -->
+      <div class="actor pax">
+        <p class="bub bp">Iya Pak, tolong ya!</p>
+        <svg class="fig" viewBox="0 0 80 130" aria-hidden="true">
+          <ellipse cx="40" cy="126" rx="26" ry="4" fill="#000" opacity=".2"/>
+          <g class="lgA"><rect x="29" y="84" width="11" height="38" rx="5" fill="#16264a"/><ellipse cx="33" cy="123" rx="9" ry="4" fill="#111"/></g>
+          <g class="lgB"><rect x="42" y="84" width="11" height="38" rx="5" fill="#16264a"/><ellipse cx="48" cy="123" rx="9" ry="4" fill="#111"/></g>
+          <rect x="24" y="40" width="34" height="48" rx="12" fill="#1450b4"/>
+          <rect x="15" y="44" width="10" height="34" rx="5" fill="#1450b4"/><circle cx="20" cy="79" r="5" fill="#f1c27d"/>
+          <g class="arm"><rect x="57" y="44" width="10" height="32" rx="5" fill="#1450b4"/><circle cx="62" cy="78" r="5" fill="#f1c27d"/></g>
+          <circle cx="40" cy="24" r="15" fill="#f1c27d"/>
+          <path d="M25 22q2-17 16-17t15 17q-8-8-31 0z" fill="#241a12"/>
+          <circle cx="35" cy="26" r="1.8" fill="#222"/><circle cx="46" cy="26" r="1.8" fill="#222"/>
+          <path d="M35 33q5 4 10 0" stroke="#7a3e2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="62" y="96" width="16" height="26" rx="3" fill="#ffc72c"/><path d="M66 96v-6h8v6" stroke="#0b2a5b" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="walk"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PITA RUTE -->
+<div class="marq" aria-label="Rute populer"><div class="track">
+  <span>Bandara Kualanamu ⇄ Medan</span><span>Medan ⇄ Danau Toba</span><span>Medan ⇄ Berastagi</span><span>Medan ⇄ Bukittinggi</span><span>Medan ⇄ Padang</span><span>Wisata se-Sumatera</span>
+  <span>Bandara Kualanamu ⇄ Medan</span><span>Medan ⇄ Danau Toba</span><span>Medan ⇄ Berastagi</span><span>Medan ⇄ Bukittinggi</span><span>Medan ⇄ Padang</span><span>Wisata se-Sumatera</span>
+</div></div>
+
+<!-- LAYANAN -->
+<section id="layanan">
+  <div class="wrap svc">
+    <div>
+      <h2 class="title">Layanan Kami</h2>
+      <p class="sub">Usaha antar jemput keluarga yang kembali melaju. Turun dari pesawat, sopir sudah menunggu.</p>
+      <ul class="checks">
+        <li><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Antar jemput Bandara Kualanamu</b><span>Jemput saat tiba, antar sebelum jadwal terbang.</span></div></li>
+        <li><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Travel antar kota &amp; provinsi (se-Sumatera)</b><span>Jarak jauh sudah biasa kami tempuh.</span></div></li>
+        <li><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Perjalanan wisata</b><span>Danau Toba, Sumatera Barat, dan tempat indah lainnya.</span></div></li>
+        <li><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Jemput di Medan &amp; sekitarnya</b><span>Rumah, hotel, atau kantor, kami datang ke titik Anda.</span></div></li>
+        <li><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Sopir berpengalaman &amp; ramah</b><span>Hafal rute, sopan, dan menjaga keselamatan penumpang.</span></div></li>
+      </ul>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="ph ph1"></div><div class="ph ph2"></div>
+      <div class="stamp">Se-<br>Sumatera</div>
+    </div>
+  </div>
+</section>
+
+<!-- ARMADA -->
+<section id="armada" class="fleet">
+  <div class="wrap">
+    <h2 class="title">Pilih Armada</h2>
+    <p class="sub">Ketuk mobilnya, lihat detailnya, lalu Booking Now. WhatsApp terbuka dengan pesan yang sudah terisi sesuai mobil pilihan Anda.</p>
+
+    <input class="sr" type="radio" name="car" id="c-a" checked aria-label="Alphard">
+    <input class="sr" type="radio" name="car" id="c-i" aria-label="Innova">
+    <input class="sr" type="radio" name="car" id="c-v" aria-label="Avanza">
+    <div class="tabs">
+      <label for="c-a"><span class="th a"></span><span>Alphard<small>Putih, 2011</small></span></label>
+      <label for="c-i"><span class="th i"></span><span>Innova<small>Hitam</small></span></label>
+      <label for="c-v"><span class="th v"></span><span>Avanza<small>Hitam</small></span></label>
+    </div>
+
+    <div class="panels">
+      <article class="panel pa">
+        <div class="stagecar"><div class="pic" role="img" aria-label="Toyota Alphard putih 2011"></div></div>
+        <div>
+          <h3>Toyota Alphard Putih</h3>
+          <p>Tahun 2011. Kabin lega dan kursi empuk, pilihan yang pas untuk perjalanan jauh keliling Sumatera.</p>
+          <ul><li>Mewah</li><li>Keluarga</li><li>Jarak jauh</li></ul>
+          <a class="btn btn-sun" href="#pesan-alphard"><svg><use href="#i-wa"/></svg>Booking Now</a>
+          <p class="note">Tarif menyesuaikan rute. Tanyakan lewat WhatsApp.</p>
+        </div>
+      </article>
+      <article class="panel pi">
+        <div class="stagecar"><div class="pic" role="img" aria-label="Kijang Innova hitam"></div></div>
+        <div>
+          <h3>Kijang Innova Hitam</h3>
+          <p>MPV andalan keluarga. Tangguh untuk rute antar kota, bagasi cukup luas untuk koper dan oleh-oleh.</p>
+          <ul><li>Tangguh</li><li>Bagasi luas</li><li>Antar kota</li></ul>
+          <a class="btn btn-sun" href="#pesan-innova"><svg><use href="#i-wa"/></svg>Booking Now</a>
+          <p class="note">Tarif menyesuaikan rute. Tanyakan lewat WhatsApp.</p>
+        </div>
+      </article>
+      <article class="panel pv">
+        <div class="stagecar"><div class="pic" role="img" aria-label="Toyota Avanza hitam"></div></div>
+        <div>
+          <h3>Toyota Avanza Hitam</h3>
+          <p>Irit dan lincah di dalam kota. Cocok untuk jemput bandara dan rombongan kecil.</p>
+          <ul><li>Irit</li><li>Praktis</li><li>Dalam kota</li></ul>
+          <a class="btn btn-sun" href="#pesan-avanza"><svg><use href="#i-wa"/></svg>Booking Now</a>
+          <p class="note">Tarif menyesuaikan rute. Tanyakan lewat WhatsApp.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TUJUAN -->
+<section id="wisata">
+  <div class="wrap">
+    <h2 class="title">Mau Liburan ke Mana?</h2>
+    <p class="sub">Dari Medan, kami antar sampai ke tempat-tempat indah di Sumatera.</p>
+    <p class="hint">Geser ke samping untuk melihat semua tujuan →</p>
+    <div class="pcs">
+      <figure class="pc"><div class="im t-toba" role="img" aria-label="Danau Toba"></div><span class="pm">SUMATERA UTARA</span><h3>Danau Toba</h3><p>Danau vulkanik terbesar, udaranya sejuk.</p></figure>
+      <figure class="pc"><div class="im t-gadang" role="img" aria-label="Jam Gadang Bukittinggi"></div><span class="pm">SUMATERA BARAT</span><h3>Jam Gadang</h3><p>Ikon kota Bukittinggi.</p></figure>
+      <figure class="pc"><div class="im t-air" role="img" aria-label="Air terjun"></div><span class="pm">SUMATERA</span><h3>Air Terjun</h3><p>Segar, cocok untuk liburan keluarga.</p></figure>
+      <figure class="pc"><div class="im t-pagaruyung" role="img" aria-label="Istana Pagaruyung"></div><span class="pm">SUMATERA BARAT</span><h3>Istana Pagaruyung</h3><p>Megah dengan atap bergonjong khas Minang.</p></figure>
+      <figure class="pc"><div class="im t-rumah" role="img" aria-label="Rumah Gadang"></div><span class="pm">SUMATERA BARAT</span><h3>Rumah Gadang</h3><p>Arsitektur khas Minangkabau.</p></figure>
+      <figure class="pc"><div class="im t-kelok" role="img" aria-label="Jembatan Kelok 9"></div><span class="pm">SUMATERA BARAT</span><h3>Jembatan Kelok 9</h3><p>Jalan layang melingkar di tengah hutan.</p></figure>
+    </div>
+  </div>
+</section>
+
+<!-- JANJI -->
+<div class="promise">
+  <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M60 8 38 30 8 20l-4 4 24 12-8 10-10-2-3 3 12 6 6 12 3-3-2-10 10-8 12 24 4-4-10-30 22-22z"/></svg>
+  <div class="wrap">
+    <p class="big">Tepat waktu. Aman. Ramah.</p>
+    <p class="small">Itu yang kami jaga di setiap perjalanan, dekat maupun jauh.</p>
+  </div>
+</div>
+
+<!-- CARA PESAN -->
+<section id="pesan">
+  <div class="wrap">
+    <h2 class="title">Dari Chat sampai Duduk Manis</h2>
+    <p class="sub">Empat langkah, semuanya lewat WhatsApp.</p>
+    <div class="route">
+      <div class="stop"><span class="n">1</span><h3>Pilih mobil</h3><p>Alphard, Innova, atau Avanza sesuai kebutuhan Anda.</p></div>
+      <div class="stop"><span class="n">2</span><h3>Booking Now</h3><p>Pilih nomor WhatsApp, pesan sudah terisi otomatis.</p></div>
+      <div class="stop"><span class="n">3</span><h3>Isi &amp; kirim</h3><p>Lengkapi tanggal, jam, lokasi jemput, dan tujuan.</p></div>
+      <div class="stop"><span class="n">4</span><h3>Dijemput</h3><p>Setelah konfirmasi, sopir datang ke titik jemput Anda.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faqs">
+  <div class="wrap">
+    <h2 class="title" style="text-align:center">Pertanyaan Umum</h2>
+    <p class="sub" style="text-align:center;margin-inline:auto;margin-bottom:0">Belum ketemu jawabannya? Tanya langsung lewat WhatsApp.</p>
+    <div class="faq">
+      <details><summary>Dijemput di mana saja?</summary><p>Di Bandara Kualanamu, serta rumah, hotel, atau kantor di Medan dan sekitarnya.</p></details>
+      <details><summary>Bisa antar ke luar kota atau luar provinsi?</summary><p>Bisa. Kami melayani travel antar kota dan provinsi di seluruh Sumatera.</p></details>
+      <details><summary>Berapa tarifnya?</summary><p>Tarif tergantung rute, jarak, dan mobil yang dipilih. Tanyakan lewat WhatsApp, tarif kami kabari sebelum berangkat.</p></details>
+      <details><summary>Bisa untuk rombongan besar?</summary><p>Bisa. Kami punya tiga armada, jadi rombongan yang ramai bisa dibagi ke beberapa mobil sekaligus.</p></details>
+      <details><summary>Bagaimana cara memesan?</summary><p>Pilih armada, klik Booking Now, pilih nomor WhatsApp, lalu kirim pesan yang sudah terisi.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="contact">
+  <div class="wrap">
+    <h2 class="title">Siap Berangkat?</h2>
+    <p class="sub">Hubungi kami, tanya jadwal dan ketersediaan mobil.</p>
+    <div class="pass">
+      <div class="pass-main">
+        <div class="pass-top"><b>Kualanamu Travel</b><span>Tiket perjalanan</span></div>
+        <div class="fields">
+          <div><small>Dari</small><strong>Medan &amp; sekitarnya</strong></div>
+          <div><small>Ke</small><strong>Bandara Kualanamu</strong></div>
+          <div class="full"><small>Armada</small><strong>Alphard • Innova • Avanza</strong></div>
+          <div class="full"><small>Layanan</small><strong>Antar jemput bandara, travel se-Sumatera, perjalanan wisata</strong></div>
+        </div>
+        <div class="bars" aria-hidden="true"></div>
+      </div>
+      <div class="stub">
+        <h3>Booking Now</h3>
+        <a class="btn btn-wa" href="https://wa.me/628985675586?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20%28mobil%3A%20Alphard%20%2F%20Innova%20%2F%20Avanza%29.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>0898-5675-586</a>
+        <a class="btn btn-wa" href="https://wa.me/6282314044141?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20%28mobil%3A%20Alphard%20%2F%20Innova%20%2F%20Avanza%29.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>0823-1404-4141</a>
+        <a class="btn ig" href="https://instagram.com/zann.callmezan" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@zann.callmezan</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fr" aria-hidden="true"><i></i></div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><p class="fb">Kualanamu Travel</p><p>Antar jemput Bandara Kualanamu, travel antar kota dan provinsi se-Sumatera, serta perjalanan wisata.</p></div>
+      <div><h4>Menu</h4><ul><li><a href="#layanan">Layanan</a></li><li><a href="#armada">Armada</a></li><li><a href="#wisata">Tujuan wisata</a></li><li><a href="#pesan">Cara pesan</a></li><li><a href="#faq">Pertanyaan umum</a></li></ul></div>
+      <div><h4>Booking</h4><ul><li><a href="#pesan-alphard">Alphard Putih</a></li><li><a href="#pesan-innova">Innova Hitam</a></li><li><a href="#pesan-avanza">Avanza Hitam</a></li></ul></div>
+      <div><h4>Hubungi kami</h4><ul><li><a href="https://wa.me/628985675586?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20%28mobil%3A%20Alphard%20%2F%20Innova%20%2F%20Avanza%29.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener">WhatsApp 0898-5675-586</a></li><li><a href="https://wa.me/6282314044141?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20%28mobil%3A%20Alphard%20%2F%20Innova%20%2F%20Avanza%29.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener">WhatsApp 0823-1404-4141</a></li><li><a href="https://instagram.com/zann.callmezan" target="_blank" rel="noopener">Instagram @zann.callmezan</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Kualanamu Travel. Medan, Sumatera Utara.</span><a href="#atas">Kembali ke atas ↑</a></div>
+  </div>
+</footer>
+
+<a class="fab" href="#pesan-umum" aria-label="Booking lewat WhatsApp"><svg><use href="#i-wa"/></svg><span>Chat WhatsApp</span></a>
+
+<div class="modal" id="pesan-umum" role="dialog" aria-label="Pilih nomor WhatsApp"><a class="back" href="#tutup" aria-label="Tutup"></a><div class="box"><a class="x" href="#tutup" aria-label="Tutup">×</a><h3>Booking lewat WhatsApp</h3><p>Pilih nomor WhatsApp yang ingin dihubungi. Pesan di bawah terisi otomatis, tinggal lengkapi dan kirim.</p><pre>Halo Kualanamu Travel, saya mau booking travel (mobil: Alphard / Innova / Avanza).
+
+Nama: 
+Tanggal berangkat: 
+Jam jemput: 
+Lokasi jemput: 
+Tujuan: 
+Jumlah penumpang: 
+
+Mohon info tarif dan ketersediaannya. Terima kasih.</pre><a class="btn btn-wa" href="https://wa.me/628985675586?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20%28mobil%3A%20Alphard%20%2F%20Innova%20%2F%20Avanza%29.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0898-5675-586</a><a class="btn btn-wa" href="https://wa.me/6282314044141?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20%28mobil%3A%20Alphard%20%2F%20Innova%20%2F%20Avanza%29.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0823-1404-4141</a></div></div><div class="modal" id="pesan-alphard" role="dialog" aria-label="Pilih nomor WhatsApp"><a class="back" href="#tutup" aria-label="Tutup"></a><div class="box"><a class="x" href="#tutup" aria-label="Tutup">×</a><div class="mpic"><div class="im" role="img" aria-label="Toyota Alphard Putih (2011)" style="background-image:var(--i-alphard);aspect-ratio:1/0.761"></div></div><h3>Toyota Alphard Putih (2011)</h3><p>Pilih nomor WhatsApp yang ingin dihubungi. Pesan di bawah terisi otomatis, tinggal lengkapi dan kirim.</p><pre>Halo Kualanamu Travel, saya mau booking travel dengan *Toyota Alphard Putih (2011)*.
+
+Nama: 
+Tanggal berangkat: 
+Jam jemput: 
+Lokasi jemput: 
+Tujuan: 
+Jumlah penumpang: 
+
+Mohon info tarif dan ketersediaannya. Terima kasih.</pre><a class="btn btn-wa" href="https://wa.me/628985675586?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20dengan%20%2AToyota%20Alphard%20Putih%20%282011%29%2A.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0898-5675-586</a><a class="btn btn-wa" href="https://wa.me/6282314044141?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20dengan%20%2AToyota%20Alphard%20Putih%20%282011%29%2A.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0823-1404-4141</a></div></div><div class="modal" id="pesan-innova" role="dialog" aria-label="Pilih nomor WhatsApp"><a class="back" href="#tutup" aria-label="Tutup"></a><div class="box"><a class="x" href="#tutup" aria-label="Tutup">×</a><div class="mpic"><div class="im" role="img" aria-label="Kijang Innova Hitam" style="background-image:var(--i-innova);aspect-ratio:1/0.685"></div></div><h3>Kijang Innova Hitam</h3><p>Pilih nomor WhatsApp yang ingin dihubungi. Pesan di bawah terisi otomatis, tinggal lengkapi dan kirim.</p><pre>Halo Kualanamu Travel, saya mau booking travel dengan *Kijang Innova Hitam*.
+
+Nama: 
+Tanggal berangkat: 
+Jam jemput: 
+Lokasi jemput: 
+Tujuan: 
+Jumlah penumpang: 
+
+Mohon info tarif dan ketersediaannya. Terima kasih.</pre><a class="btn btn-wa" href="https://wa.me/628985675586?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20dengan%20%2AKijang%20Innova%20Hitam%2A.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0898-5675-586</a><a class="btn btn-wa" href="https://wa.me/6282314044141?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20dengan%20%2AKijang%20Innova%20Hitam%2A.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0823-1404-4141</a></div></div><div class="modal" id="pesan-avanza" role="dialog" aria-label="Pilih nomor WhatsApp"><a class="back" href="#tutup" aria-label="Tutup"></a><div class="box"><a class="x" href="#tutup" aria-label="Tutup">×</a><div class="mpic"><div class="im" role="img" aria-label="Toyota Avanza Hitam" style="background-image:var(--i-avanza);aspect-ratio:1/0.766"></div></div><h3>Toyota Avanza Hitam</h3><p>Pilih nomor WhatsApp yang ingin dihubungi. Pesan di bawah terisi otomatis, tinggal lengkapi dan kirim.</p><pre>Halo Kualanamu Travel, saya mau booking travel dengan *Toyota Avanza Hitam*.
+
+Nama: 
+Tanggal berangkat: 
+Jam jemput: 
+Lokasi jemput: 
+Tujuan: 
+Jumlah penumpang: 
+
+Mohon info tarif dan ketersediaannya. Terima kasih.</pre><a class="btn btn-wa" href="https://wa.me/628985675586?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20dengan%20%2AToyota%20Avanza%20Hitam%2A.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0898-5675-586</a><a class="btn btn-wa" href="https://wa.me/6282314044141?text=Halo%20Kualanamu%20Travel%2C%20saya%20mau%20booking%20travel%20dengan%20%2AToyota%20Avanza%20Hitam%2A.%0A%0ANama%3A%20%0ATanggal%20berangkat%3A%20%0AJam%20jemput%3A%20%0ALokasi%20jemput%3A%20%0ATujuan%3A%20%0AJumlah%20penumpang%3A%20%0A%0AMohon%20info%20tarif%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat ke 0823-1404-4141</a></div></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2Zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-3.900-4.700-4.100-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.300Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9Zm0 2a2.500 2.500 0 1 0 0 5 2.500 2.500 0 0 0 0-5Zm5.300-3.300a1.100 1.100 0 1 1 0 2.200 1.100 1.100 0 0 1 0-2.200Z"/></symbol>
+</svg>
+</body>
+</html>
